@@ -9,7 +9,7 @@ tConstr(x, y, alpha, independentSamp = TRUE, equalVar = TRUE)
 \arguments{
 \item{x}{X Vector (numeric)}
 
-\item{y}{y vector (numeric)}
+\item{y}{Y vector (numeric)}
 
 \item{alpha}{alpha/error value (numeric)}
 

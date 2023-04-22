@@ -14,7 +14,7 @@
 
 tConstr = function(x, y, alpha, independentSamp = TRUE, equalVar = TRUE){
   library(devtools)
-  library(kableExtra)
+
   if(independentSamp==TRUE && equalVar == TRUE){
     #run the t-test with equal var
     ttest = t.test(x, y, var.equal = TRUE)

@@ -63,7 +63,7 @@ print.Rttest = function(funObject){
 }
 #create plot.Rttest setup
 plot.Rttest = function(funObject, i=5, j=6, k=7, l=8){
-  #par(mar = c(1, 1, 1, 1))
+  par(mar = c(1, 1, 1, 1))
   Y = funObject[[j]]
   X = funObject[[i]]
   plotT <- plot(Y~X,
