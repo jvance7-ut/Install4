@@ -23,3 +23,4 @@ plot.Rttest = function(funObject, i=5, j=6, k=7, l=8){
   plotT
 
 }
+
