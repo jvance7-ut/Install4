@@ -71,6 +71,7 @@ plot.Rttest = function(funObject, i=5, j=6, k=7, l=8){
                               ifelse(funObject[[l]] == TRUE, "Independent, Equal Var t-test",
                                      "Independent, Unequal var t-test")), col = "blue",
                 pch=19 )
+
   plotT
 
 }
