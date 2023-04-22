@@ -13,7 +13,8 @@
 #' \dontrun{tConstr(x=rnorm(30,5,2), y=rnorm(30,3,2), alpha=0.05)}
 
 tConstr = function(x, y, alpha, independentSamp = TRUE, equalVar = TRUE){
-
+  library(devtools)
+  library(kableExtra)
   if(independentSamp==TRUE && equalVar == TRUE){
     #run the t-test with equal var
     ttest = t.test(x, y, var.equal = TRUE)
