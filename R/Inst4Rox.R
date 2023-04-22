@@ -1,7 +1,7 @@
 #' Title t-test Installment 4
 #'
 #' @param x X Vector (numeric)
-#' @param y y vector (numeric)
+#' @param y Y vector (numeric)
 #' @param alpha alpha/error value (numeric)
 #' @param independentSamp Is independent? (default TRUE)
 #' @param equalVar Has equal variance? (default TRUE)
