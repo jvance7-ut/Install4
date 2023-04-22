@@ -1,6 +1,7 @@
 #' Title t-test Installment 4
 #'
 #' @importFrom kableExtra kable
+#' @importFrom ggplot2 ggplot geom_point labs xlab ylab
 #'
 #' @param x X Vector (numeric)
 #' @param y Y vector (numeric)
