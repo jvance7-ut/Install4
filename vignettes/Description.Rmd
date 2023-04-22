@@ -1,0 +1,69 @@
+---
+title: "Intallment4"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Intallment4}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(Intallment4)
+
+```
+
+# Introduction
+Run a t-test from two vectors.
+
+# tConstr()
+Run a t-test based off of two vectors
+
+## Input
+x - An x vector of numeric values
+
+y - A y vector of numeric values
+
+alpha - An error rate value that is numeric
+
+independentSamp - A TRUE/FALSE value stating if the vector inputs are independent
+    Default: TRUE
+    
+equalVar - A TRUE/FALSE value stating if the vector inputs have equal variance
+    Default: TRUE
+
+# Print method
+print.Rttest method used to print objects from tConstr() of class "Rttest".
+
+## Input
+funObject - object equal to valid tConstr()
+
+## Output
+A kable version of the data set made from the input vectors x and y.
+(Requires `kableExtra`)
+
+# Plot method
+plot.Rttest method used to plot objects from tConstr() of class "Rttest".
+
+## Input
+funObject - object equal to valid tConstr()
+
+### NOT REQUIRED
+i, j - x and y vectors from object index
+
+k, l - TRUE/FALSE values for independentSamp and equalVar
+
+** NOT ADVISED TO CHANGE
+
+## Output
+Dot plot of x and y stating what type of test was used in the title
+
+# Example
+
+`tConstr(x=rnorm(30,5,2), y=rnorm(30,3,2), alpha=0.05)`
