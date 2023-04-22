@@ -10,7 +10,7 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{tConstr(x=x, y=y, alpha=alpha)}
+#' \dontrun{tConstr(x=rnorm(30,5,2), y=rnorm(30,3,2), alpha=0.05)}
 
 tConstr = function(x, y, alpha, independentSamp = TRUE, equalVar = TRUE){
 
