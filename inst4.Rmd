@@ -1,0 +1,60 @@
+---
+title: "Installment 4"
+author: "Jennifer Vance"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#Installment 4 run
+
+```{r}
+library(Intallment4)
+
+#generate x and y
+#and set alpha
+set.seed(21)
+x <-rnorm(30,5,2)
+set.seed(23)
+y<- rnorm(30,3,2)
+alpha <- 0.05
+
+
+
+#set function to object
+obj = tConstr(x=x, y=y, alpha=alpha)
+
+#create print.Rttest setup
+library(kableExtra)
+print.Rttest = function(funObject){
+  kFO = kable(funObject$Data)
+  z = NextMethod(kFO)
+  class(z) = c("Rttest", class(z))
+  kFO
+}
+#create plot.Rttest setup
+plot.Rttest = function(funObject, i=5, j=6, k=7, l=8){
+  par(mar = c(1, 1, 1, 1))
+  Y = funObject[[j]]
+  X = funObject[[i]]
+  plotT <- plot(Y~X,
+                main = ifelse(funObject[[k]] == FALSE, "Paired t-test",
+                              ifelse(funObject[[l]] == TRUE, "Independent, Equal Var t-test",
+                                     "Independent, Unequal var t-test")), col = "blue",
+                pch=19 )
+  plotT
+
+}
+
+#change class to Rttest
+attr(obj, "class") ="Rttest"
+
+#call function object parts
+class(obj)
+print(obj)
+plot(obj)
+```
+
