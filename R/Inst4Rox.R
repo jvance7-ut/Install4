@@ -1,5 +1,7 @@
 #' Title t-test Installment 4
 #'
+#' @importFrom kableExtra kable
+#'
 #' @param x X Vector (numeric)
 #' @param y Y vector (numeric)
 #' @param alpha alpha/error value (numeric)
